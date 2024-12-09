@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas KTI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start qris -->
+     <div class="qris" id="qris">
+        <button type="button" class="close" onclick="closeQris()">X</button>
+        <div class="">
+         <h2>Qris</h2>
+         <img src="./image/qris.jpeg" alt="qris">
+         <p class="price">Rp 50.000</p>
+        </div>
+     </div>
+    <!-- end qris -->
+
+    <div class="cash" id="cash">
+        <button type="button" class="close" onclick="closeCash()">X</button>
+        <div class="">
+         <h2></h2>
+         <p class="id">ID pesanan: 69420</p>
+         <p class="det">Uang yang perlu anda bayarkan ke kasir
+            adalah </p>
+         <p class="price">Rp 50.000</p>
+        </div>
+     </div>
+
+
+    <header>
+        <h1>Tugas KTI</h1>
+        <input type="text" placeholder="Mau makan apa..." oninput="filterMenu()">
+    </header>
+
+    <div class="categories">
+        <button onclick="scrollToSection('snack')">
+            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  
+                <g id="Fries">
+                  <path d="M19.51,9.535a1.091,1.091,0,0,0-.81-.36H17.67a.5.5,0,0,0-.17.02V4.815a1.5,1.5,0,0,0-1.5-1.5h-.5a1.3,1.3,0,0,0-.52.1,1.474,1.474,0,0,0-1.48-1.35H13a1.5,1.5,0,0,0-1.5,1.5v1.59a1.386,1.386,0,0,0-.5-.09h-.5a1.348,1.348,0,0,0-.5.09v-.34a1.5,1.5,0,0,0-1.5-1.5H8a1.5,1.5,0,0,0-1.5,1.5V9.2a.5.5,0,0,0-.17-.02H5.3a1.1,1.1,0,0,0-1.08,1.2l.85,8.98a2.84,2.84,0,0,0,2.84,2.58h8.18a2.84,2.84,0,0,0,2.84-2.58l.85-8.98A1.112,1.112,0,0,0,19.51,9.535ZM15,4.815a.5.5,0,0,1,.5-.5H16a.5.5,0,0,1,.5.5v6.14h.01A2.915,2.915,0,0,1,15,13.015Zm-2.5,8.53V3.565a.5.5,0,0,1,.5-.5h.5a.5.5,0,0,1,.5.5v9.76Zm-2.5-.02V6.565a.5.5,0,0,1,.5-.5H11a.5.5,0,0,1,.5.5v6.78ZM7.5,4.815a.5.5,0,0,1,.5-.5h.5a.5.5,0,0,1,.5.5v8.2a2.877,2.877,0,0,1-1.5-2.06Zm11.29,5.391-.85,9.049a1.85,1.85,0,0,1-1.85,1.68H7.91a1.84,1.84,0,0,1-1.84-1.68l-.86-9.08H6.33a.1.1,0,0,1,.09.08l.05.56a3.891,3.891,0,0,0,3.88,3.53h3.3a3.884,3.884,0,0,0,3.88-3.53l.05-.56a.106.106,0,0,1,.09-.08Z"/>
+                </g>
+              </svg>
+            Snack
+        </button>
+        <button onclick="scrollToSection('rice')">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><path class="cls-1" d="M22.5,12H1.5c0,3.91,3.31,7.27,6.68,8.75V22.5h7.64V20.75C19.19,19.27,22.5,15.91,22.5,12Z"/><path class="cls-1" d="M2.45,12C2.45,6.2,6.73,1.5,12,1.5S21.55,6.2,21.55,12"/><line class="cls-1" x1="7.23" y1="8.18" x2="9.14" y2="8.18"/><line class="cls-1" x1="12" y1="9.14" x2="13.91" y2="9.14"/><line class="cls-1" x1="12.95" y1="5.32" x2="14.86" y2="5.32"/><line class="cls-1" x1="16.77" y1="8.18" x2="18.68" y2="8.18"/></svg>
+            Rice
+        </button>
+        <button onclick="scrollToSection('coffee')">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Environment / Coffee">
+                <path id="Vector" d="M4 20H10.9433M10.9433 20H11.0567M10.9433 20C10.9622 20.0002 10.9811 20.0002 11 20.0002C11.0189 20.0002 11.0378 20.0002 11.0567 20M10.9433 20C7.1034 19.9695 4 16.8468 4 12.9998V8.92285C4 8.41305 4.41305 8 4.92285 8H17.0767C17.5865 8 18 8.41305 18 8.92285V9M11.0567 20H18M11.0567 20C14.8966 19.9695 18 16.8468 18 12.9998M18 9H19.5C20.8807 9 22 10.1193 22 11.5C22 12.8807 20.8807 14 19.5 14H18V12.9998M18 9V12.9998M15 3L14 5M12 3L11 5M9 3L8 5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>
+            Coffee
+        </button>
+        <button onclick="scrollToSection('milk')">
+            <svg width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M416 128V96a96 96 0 0 1 96-96h128a32 32 0 1 1 0 64H512a32 32 0 0 0-32 32v32h320a96 96 0 0 1 11.712 191.296l-39.68 581.056A64 64 0 0 1 708.224 960H315.776a64 64 0 0 1-63.872-59.648l-39.616-581.056A96 96 0 0 1 224 128h192zM276.48 320l39.296 576h392.448l4.8-70.784a224.064 224.064 0 0 1 30.016-439.808L747.52 320H276.48zM224 256h576a32 32 0 1 0 0-64H224a32 32 0 0 0 0 64zm493.44 503.872 21.12-309.12a160 160 0 0 0-21.12 309.12z"/></svg>
+            Milk
+        </button>
+        <button onclick="scrollToSection('soda')">
+            <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 470 470" xml:space="preserve">
+<g>
+	<path d="M360.477,117.376C359.059,115.86,357.076,115,355,115h-97.5V52.5c0-4.136,3.364-7.5,7.5-7.5h75c4.142,0,7.5-3.357,7.5-7.5
+		v-30c0-4.143-3.358-7.5-7.5-7.5h-75c-28.949,0-52.5,23.552-52.5,52.5V115H115c-2.076,0-4.059,0.86-5.477,2.376
+		c-1.418,1.516-2.145,3.552-2.006,5.623l19.983,299.75V462.5c0,4.143,3.358,7.5,7.5,7.5h200c4.142,0,7.5-3.357,7.5-7.5v-39.751
+		l19.983-299.75C362.622,120.928,361.895,118.892,360.477,117.376z M227.5,52.5c0-20.678,16.822-37.5,37.5-37.5h67.5v15H265
+		c-12.407,0-22.5,10.094-22.5,22.5V115h-15V52.5z M142.5,455v-25h185v25H142.5z M327.983,415H142.017l-19-285h223.967L327.983,415z"
+		/>
+	<path d="M242.5,152.5V205h-15v-52.5c0-4.143-3.358-7.5-7.5-7.5s-7.5,3.357-7.5,7.5V205h-61.434c-2.076,0-4.059,0.86-5.477,2.376
+		c-1.418,1.516-2.145,3.552-2.006,5.623l12,180c0.263,3.939,3.535,7.001,7.483,7.001H220h30h56.934c3.949,0,7.221-3.062,7.483-7.001
+		l5-75c0.275-4.133-2.852-7.707-6.984-7.982c-4.124-0.27-7.707,2.852-7.982,6.984L299.917,385H257.5V220h53.417l-4.467,67.001
+		c-0.275,4.133,2.852,7.707,6.984,7.982c4.131,0.284,7.707-2.852,7.982-6.984l5-75c0.138-2.071-0.588-4.107-2.006-5.623
+		c-1.418-1.516-3.401-2.376-5.477-2.376H257.5v-52.5c0-4.143-3.358-7.5-7.5-7.5S242.5,148.357,242.5,152.5z M159.083,220H212.5v165
+		h-42.417L159.083,220z M242.5,385h-15V220h15V385z"/>
+	<path d="M272.217,355c0,4.135,3.365,7.5,7.5,7.5s7.5-3.365,7.5-7.5s-3.365-7.5-7.5-7.5S272.217,350.865,272.217,355z"/>
+	<path d="M186.783,242.5c-4.135,0-7.5,3.365-7.5,7.5s3.365,7.5,7.5,7.5s7.5-3.365,7.5-7.5S190.919,242.5,186.783,242.5z"/>
+</g>
+</svg>
+            Soda
+        </button>
+    </div>
+
+
+<section id="signature">
+    <h2>Signatures</h2>
+    <div class="signature">
+        <div class="signature-item" onclick="openMenuModal('Steak Wagyu Premium', 'Rp. 150,000', 'Steak wagyu dengan saus truffle khas chef kami', './image/wahyu.jpeg')">
+            <img src="./image/wahyu.jpeg" alt="Steak Wagyu Premium">
+            <p>Wagyu Premium</p>
+            <p>Rp. 150,000</p>
+        </div>
+        <div class="signature-item" onclick="openMenuModal('Matcha Latte Artisan', 'Rp. 35,000', 'Matcha latte premium dengan cita rasa otentik Jepang', './image/matcha.jpeg')">
+            <img src="./image/matcha.jpeg" alt="Matcha Latte Artisan">
+            <p>Matcha Latte</p>
+            <p>Rp. 35,000</p>
+        </div>
+        <div class="signature-item" onclick="openMenuModal('Choco Lava Delight', 'Rp. 45,000', 'Kue cokelat lumer dengan taburan es krim vanilla', './image/choco.jpeg')">
+            <img src="./image/choco.jpeg" alt="Choco Lava Delight">
+            <p>Choco Lava</p>
+            <p>Rp. 45,000</p>
+        </div>
+        <div class="signature-item" onclick="openMenuModal('Pasta Carbonara Truffle', 'Rp. 75,000', 'Pasta dengan saus carbonara creamy dan sentuhan minyak truffle', './image/carbo.jpeg')">
+            <img src="./image/carbo.jpeg" alt="Pasta Carbonara Truffle">
+            <p>Carbonara Truffle</p>
+            <p>Rp. 75,000</p>
+        </div>
+        <div class="signature-item" onclick="openMenuModal('Berry Bliss Smoothie', 'Rp. 30,000', 'Smoothie segar dengan kombinasi beri-beri pilihan', './image/bbs.jpeg')">
+            <img src="./image/bbs.jpeg" alt="Berry Bliss Smoothie">
+            <p>Berry Bliss</p>
+            <p>Rp. 30,000</p>
+        </div>
+    </div>
+</section>
+
+<section id="snack">
+    <h2>Snacks</h2>
+    <div class="menu">
+        <div class="menu-item" onclick="openMenuModal('French Fries', 'Rp. 10,000', 'French Fries renyah dengan saus pilihan.', './image/kent.jpg')">
+            <img src="./image/kent.jpg" alt="French Fries">
+            <p>French Fries</p>
+            <p>Rp. 10,000</p>
+        </div>
+        <div class="menu-item" onclick="openMenuModal('Crispy Tofu', 'Rp. 15,000', 'Crispy Tofu dengan bumbu spesial.', './image/tahu.jpeg')">
+            <img src="./image/tahu.jpeg" alt="Crispy Tofu">
+            <p>Crispy Tofu</p>
+            <p>Rp. 15,000</p>
+        </div>
+        <div class="menu-item" onclick="openMenuModal('Kroket Daging', 'Rp. 18,000', 'Kroket isi daging giling dengan saus sambal.', './image/kroket.jpg')">
+            <img src="./image/kroket.jpg" alt="Kroket Daging">
+            <p>Kroket Daging</p>
+            <p>Rp. 18,000</p>
+        </div>
+        <div class="menu-item" onclick="openMenuModal('Pisang Cokelat', 'Rp. 12,000', 'Pisang goreng dibalut dengan cokelat lezat.', './image/pisco.png')">
+            <img src="./image/pisco.png" alt="Pisang Cokelat">
+            <p>Pisang Cokelat</p>
+            <p>Rp. 12,000</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="rice">
+        <h2>Rice</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="openMenuModal('Nasi Goreng Spesial', 'Rp. 20,000', 'Nasi goreng dengan tambahan telur, ayam, dan sayuran.', './image/nasgor.jpeg')">
+                <img src="./image/nasgor.jpeg" alt="Nasi Goreng Spesial">
+                <p>Nasgor Spesial</p>
+                <p>Rp. 20,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('Nasi Ayam Geprek', 'Rp. 22,000', 'Nasi putih dengan ayam goreng tepung dan sambal pedas.', './image/geprek.jpeg')">
+                <img src="./image/geprek.jpeg" alt="Nasi Ayam Geprek">
+                <p>Ayam Geprek</p>
+                <p>Rp. 22,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('Nasi Uduk Komplit', 'Rp. 30,000', 'Nasi uduk dengan lauk ayam goreng, tempe, tahu, dan sambal.', './image/uduk.jpg')">
+                <img src="./image/uduk.jpg" alt="Nasi Uduk Komplit">
+                <p>Nasi Uduk</p>
+                <p>Rp. 30,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('Nasi Kebuli', 'Rp. 35,000', 'Nasi khas Timur Tengah dengan rempah-rempah dan daging kambing.', './image/kebul.webp')">
+                <img src="./image/kebul.webp" alt="Nasi Kebuli">
+                <p>Nasi Kebuli</p>
+                <p>Rp. 35,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="coffee">
+        <h2>Coffee</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="openMenuModal('Latte', 'Rp. 20,000', 'kopi latte enak.', './image/latte.webp')">
+                <img src="./image/latte.webp" alt="Latte">
+                <p>Latte</p>
+                <p>Rp. 20,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('Espresso', 'Rp. 15,000', 'espresso pait dikit.', './image/espresso.avif')">
+                <img src="./image/espresso.avif" alt="Espresso">
+                <p>Espresso</p>
+                <p>Rp. 15,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="milk">
+        <h2>Milk</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="openMenuModal('Chocolate Milk', 'Rp. 15,000', 'susu coklat (bukan milo).', './image/chocom.webp')">
+                <img src="./image/chocom.webp" alt="Chocolate Milk">
+                <p>Chocolate Milk</p>
+                <p>Rp. 15,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('Strawberry Milk', 'Rp. 15,000', 'susu stroberi dari sapi berwarna pink.', './image/strawb.jpg')">
+                <img src="./image/strawb.jpg" alt="Strawberry Milk">
+                <p>Strawberry Milk</p>
+                <p>Rp. 15,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="soda">
+        <h2>Soda</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="openMenuModal('Cola', 'Rp. 18,000', 'coca cola tapi agak mahalan.', './image/cola.jpg')">
+                <img src="./image/cola.jpg" alt="Cola">
+                <p>Cola</p>
+                <p>Rp. 18,000</p>
+            </div>
+            <div class="menu-item" onclick="openMenuModal('sprite', 'Rp. 18,000', 'cola tapi kecut dikit', './image/sprite.jpg')">
+                <img src="./image/sprite.jpg" alt="sprite">
+                <p>sprite</p>
+                <p>Rp. 18,000</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="menu-modal">
+        <button class="close" onclick="closeMenuModal()">&times;</button>
+        <img id="modal-image" src="" alt="Menu Item">
+        <h3 id="modal-name"></h3>
+        <p id="modal-price"></p>
+        <p id="modal-description"></p>
+        <div id="quantity-control">
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="number" id="menu-quantity" value="1" min="1">
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+        <button onclick="addToCartFromModal()">Add to Cart</button>
+    </div>
+    
+
+    <div id="cart" onclick="toggleCart()"></div>
+    <div id="cart" onclick="openCheckout()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="White" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+      </svg>      
+      </div>
+
+    <div id="checkout-page">
+        <div id="checkout-content">
+            <button id="close-checkout" onclick="closeCheckout()">&times;</button>
+            <h3>Pesanan Anda</h3>
+            <ul id="checkout-list"></ul>
+            <p id="checkout-total">Total: Rp. 0</p>
+            <div id="checkout-buttons">
+                <button  onclick="payWithCash()" class="cashier" style="display: none;">Bayar di kasir</button>
+                <button  onclick="payWithQR()" class="qr" style="display: none;">Bayar dengan QRIS</button>
+
+            </div>
+        </div>
+    </div>
+    <div id="checkout-page" style="display: none;">
+        <ul id="checkout-list"></ul>
+        <p id="checkout-total"></p>
+        <div id="pay-options" style="display: none;">
+            <button>Bayar Tunai</button>
+            <button id="hhh" onclick="payWithQR()">Bayar  QR</button>
+        </div>
+        <button onclick="closeCheckout()">Tutup</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
